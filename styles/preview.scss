@@ -1,0 +1,53 @@
+@import "./mixin/mixin.scss";
+
+.preview {
+    background: url("../static/img/main.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100%;
+    min-height: 42rem;
+    position: relative;
+
+    @include _834 {
+        background: url("../static/img/main_834.png");
+        background-position: 50% 50%;
+        height: 100%;
+        min-height: 40rem;
+    }
+
+    @include _600 {
+        background: url("../static/img/main_600.png");
+        background-position: 50% 50%;
+        height: 100%;
+        min-height: 28.8rem;
+    }
+
+    @include _480 {
+        background: url("../static/img/main_480.png");
+        background-position: 50% 50%;
+        height: 100%;
+        min-height: 23rem;
+    }
+
+    @include _320 {
+        background: url("../static/img/main_320.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 100%;
+        min-height: 15.3rem;
+    }
+
+    .preview__button {
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5;
+        transform: translate3d(-50%, -50%, 0);
+
+        @include _834 {
+            
+        }
+    }
+}

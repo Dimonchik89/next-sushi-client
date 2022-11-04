@@ -1,0 +1,113 @@
+@import "./mixin/mixin.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    // height: 54rem;
+    height: 100%;
+    width: 30rem;
+
+    &.active {
+        border: 3px solid red;
+        box-shadow: .3rem .7rem .7rem rgba(red, .3);
+        border-radius: 1rem;
+    }
+
+    @include _834 {
+        margin: 0 auto 2rem;
+    }
+
+    @include _320 {
+        width: 25rem;
+    }
+}
+
+.card-img__wrapper {
+    text-align: center;
+    position: relative;
+
+    @include _834 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card__img {
+        width: 30rem;
+        height: 30rem;
+        object-fit: contain;
+
+        @include _600 {
+            width: 27rem;
+            height: 27rem;
+        }
+
+        @include _320 {
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+}
+
+.card-info {
+    margin-top: 3.6rem;
+}
+
+.card__title {
+
+    &.MuiTypography-root {
+        text-transform: capitalize;
+        font-size: 2.2rem;
+        font-weight: 800;
+
+        @include _834 {
+            font-size: 2rem;
+        }
+
+        @include _600 {
+            font-size: 1.8rem;
+        }
+
+        @include _320 {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.card-description {
+    flex: 1 1 0;
+}
+
+.card__text {
+    
+    &.MuiTypography-root {
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        @include _600 {
+            font-size: 1.2rem;
+        }
+
+        @include _320 {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.card-button__wrapper {
+    margin-top: 2.5rem;
+}
+
+.card__inner {
+
+    &.MuiGrid-root {
+
+        @include _480 {
+            margin: 0 auto;
+        }
+    }
+
+    // &.active {
+    //     border: 3px solid red;
+    //     box-shadow: .3rem .7rem .7rem rgba(red, .3);
+    // }
+}

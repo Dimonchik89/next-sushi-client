@@ -1,0 +1,43 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.feedback {
+    padding: 2.9rem 0;
+    background: $green;
+    cursor: pointer;
+
+    @include _834 {
+        padding: 2rem 0;
+    }
+
+    .feedback__icon {
+        width: 2.2rem;
+        height: 2.2rem;
+
+        @include _600 {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .feedback__text {
+        margin-left: 1.9rem;
+
+        &.MuiTypography-root {
+            font-size: 1.8rem;
+            font-weight: 700;
+
+            @include _600 {
+                font-size: 1.4rem;
+            }
+
+            @include _480 {
+                font-size: 1rem;
+            }
+
+            @include _320 {
+                font-size: .8rem;
+            }
+        }
+    }
+}

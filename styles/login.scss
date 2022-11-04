@@ -1,0 +1,27 @@
+.login {
+    height: 100vh;
+
+    .login__title {
+
+        &.MuiTypography-root {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+    }
+
+    .login-form__wrapepr {
+        margin-top: 2.5rem;
+
+        .login__form {
+            width: 300px;
+        }
+    }
+
+    .login-input__wrapper {
+        margin: 1.5rem 0;
+
+        .MuiFormControl-root {
+            width: 100%;
+        }
+    }
+}

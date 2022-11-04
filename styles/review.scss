@@ -1,0 +1,140 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.review {
+    background: $gray;
+    padding-bottom: 7.4rem;
+    padding-top: 7.4rem;
+
+    @include _834 {
+        padding-top: 4rem;
+        padding-bottom: 4.9rem;
+    }
+
+    .review__title {
+        margin-bottom: 2.9rem;
+
+        @include _834 {
+            margin-bottom: 2.2rem;       
+        }
+
+        @include _600 {
+            margin-bottom: 1.6rem;
+        }
+
+        @include _320 {
+            margin-bottom: 1.2rem;
+        }
+
+        &.MuiTypography-root {
+            font-size: 2.2rem;
+            font-weight: 800;
+
+            @include _600 {
+                font-size: 2.1rem;
+            }
+
+            @include _320 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .review__text {
+
+        &.MuiTypography-root {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3rem;
+
+            @include _600 {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+
+            @include _320 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .review-card {
+        padding: 5rem 0;
+        display: flex;
+        justify-content: center;
+
+        @include _600 {
+            padding: 5rem 0 2rem;
+        }
+
+        .review-card__inner {
+            width: 32.5rem;
+            height: 18.5rem;
+            position: relative;
+            border: 1px solid $green;
+            background: $white-dark;
+            border-radius: 3rem;
+
+            @include _600 {
+                width: 22.8rem;
+                height: 13rem;
+            }
+
+            .review-info {
+                padding: 5rem 3.5rem 0;
+
+                @include _600 {
+                    padding: 4rem 2rem 0;
+                }
+            }
+
+            .review__avatar {
+                width: 9rem;
+                height: 9rem;
+
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: 5;
+                transform: translate3d(-50%, -50%, 0);
+
+                @include _600 {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+
+            .review-card__text {
+                font-size: 1.4rem;
+                font-weight: 400;
+                text-align: center;
+
+                @include _600 {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .review-rating {
+                margin-top: 0.9rem;
+
+                .review-card__rating {
+
+                    &.MuiRating-root {
+                        color: $green;
+                        font-size: 2.5rem;
+
+                        @include _600 {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+
+
+            .MuiRating-icon {
+                color: $green !important;
+            }
+        }
+    }
+
+}

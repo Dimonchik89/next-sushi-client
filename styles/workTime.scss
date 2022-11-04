@@ -1,0 +1,84 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.work-time {
+    background: url("../static/img/time_bg.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    // min-height: 42rem;
+    color: $white;
+
+    .work-time__inner {
+        height: 100%;
+        height: 42rem;
+
+        .work-time__item {
+            width: 50%;
+            padding: 0 8.5rem 0 12rem;
+            box-sizing: border-box;
+
+            @include _834 {
+                width: 100%;
+                padding: 0 14rem 0 14rem;
+            }
+
+            @include _600 {
+                padding: 0;
+            }
+
+            .work-time__title-wrapper {
+                margin-bottom: 1.6rem;
+
+                .work-time__title {
+                    font-size: 2.2rem;
+                    font-weight: 800;
+                    color: $white;
+                    text-transform: uppercase;
+                    text-align: center;
+
+                    @include _600 {
+                        font-size: 2.1rem;
+                    }
+
+                    @include _320{
+                        font-size: 1.8rem;
+                    }
+                }
+    
+                .work-time__subtitle {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    color: $orange;
+                    text-align: center;
+
+                    @include _600 {
+                        font-size: 1.6rem;
+                    }
+
+                    @include _320 {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            .work-time__schedule {
+                width: 100%;
+
+                @include _834 {
+                    width: 50.7rem;
+                }
+
+                @include _480 {
+                    width: 100%;
+                }
+
+                .work-time__schedule-item {
+                    padding: 1rem;
+                    border-bottom: 2px dashed $orange;
+                }
+            }
+
+        }
+
+    }
+}

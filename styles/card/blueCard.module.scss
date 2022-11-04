@@ -1,0 +1,31 @@
+@import "../var.scss";
+
+.button__color {
+    background: $aqua !important;
+
+    &:hover {
+        background: darken($aqua, 10%) !important;
+    }
+}
+
+.button_border__color {
+    border: 1px solid $aqua !important;
+
+    &:hover {
+        background: darken($white-dark, 10%) !important;
+    }
+}
+
+.card__title {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    text-transform: capitalize !important;
+    font-style: italic !important;
+}
+
+.card__text {
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    text-transform: capitalize !important;
+}

@@ -1,0 +1,151 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.footer {
+    padding: 2.4rem 0;
+    background: $light-gray;
+
+    .footer-contact {
+        width: 100%;
+
+        @include _834 {
+            // justify-content: space-around;
+        }
+
+        .footer__title-wrapper {
+            text-align: center;
+
+            @include _834 {
+                order: 2;
+                width: 50%;
+                text-align: end;
+            }
+
+            @include _480 {
+                width: 100%;
+            }
+
+            .footer__title {
+                font-size: 2.2rem;
+                font-weight: 800;
+
+                @include _600 {
+                    font-size: 1.6rem;
+                }
+
+                @include _480 {
+                    font-size: 1.2rem;
+                }
+
+                @include _320 {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .footer__button-wrapper {
+
+            @include _834 {
+                order: 1;
+                width: 50%;
+                text-align: center;
+            }
+
+            .footer__button {
+                font-size: 1.8rem;
+                font-weight: 700;
+                display: flex;
+    
+                @include _834 {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+    
+                    width: 17.5rem;
+                    height: 4.7rem;
+                    border-radius: 2.3rem;
+                    color: $dark-black;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+
+                @include _600 {
+                    font-size: 1.4rem;
+                    width: 12.5rem;
+                    height: 4rem;
+                }
+
+                @include _480 {
+                    display: none;
+                    font-size: 1rem;
+                    width: 8.7rem;
+                    height: 2.8rem;
+                }
+            }
+        }
+
+
+    }
+
+    .footer-social__wrapepr {
+
+        @include _834 {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .footer-social {
+
+            @include _834 {
+                width: 100%;
+                padding: 1rem 0;
+                background: $white;
+                justify-content: center;
+            }
+        }
+
+        .footer-icon__wrapper {
+            margin-left: 3.5rem;
+
+            @include _834 {
+                margin: 0 2.3rem;
+
+            }
+
+            .footer__icon {
+                width: 3rem;
+                height: 3rem;
+
+                @include _834 {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            &:nth-child(2) {
+
+                .footer__icon {
+                    width: 2.3rem;
+                    height: 2.3rem;
+
+                    @include _834 {
+                        width: 1.55rem;
+                        height: 1.55rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .header__logo {
+
+        @include _834 {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+}

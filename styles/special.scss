@@ -1,0 +1,20 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.special {
+    padding: 5.6rem 0 7rem;
+    background: $gray;
+
+    @include _834 {
+        padding: 2.5rem 0 5rem;
+    }
+
+    .special-card__wrapper {
+        margin-top: 5.7rem;
+
+        @include _834 {
+            padding-top: 2.2rem;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@import "./mixin/mixin.scss";
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.d-column {
+    flex-direction: column;
+}
+
+.ml-12 {
+    margin-left: 1.2rem;
+}
+
+
+.title {
+    // font-size: 2.5rem;
+    // font-weight: 800;
+    // text-transform: uppercase;
+    // text-align: center;
+
+    // @include _834 {
+    //     font-size: 2.3rem;
+    // }
+
+    // @include _600 {
+    //     font-size: 2.1rem;
+    // }
+
+    // @include _320 {
+    //     font-size: 1.8rem;
+    // }
+    &.MuiTypography-root {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include _834 {
+            font-size: 2.3rem;
+        }
+
+        @include _600 {
+            font-size: 2.1rem;
+        }
+
+        @include _320 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container-wrapper {
+    padding: 0 4.1rem;
+
+    @include _834 {
+        padding: 0 2.3rem;
+    }
+
+    @include _320 {
+        padding: 0;
+    }
+}

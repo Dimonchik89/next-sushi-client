@@ -1,0 +1,218 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.cart-wrapper {
+
+    @include _834 {
+        // display: none;
+    }
+
+    .cart {
+        width: 14.5rem;
+        height: 7rem;
+        border: 2px solid $green;
+        border-radius: 3.5rem;
+        background: $white-dark;
+        cursor: pointer;
+
+        position: fixed;
+        top: 17.2rem;
+        right: 7rem;
+        z-index: 15;
+
+        @include _834 {
+            top: 24rem;
+            right: 2.8rem;
+        }
+        
+        @include _600 {
+            width: 10.5rem;
+            height: 5rem;
+            top: 7rem;
+            right: 1.2rem;
+        }
+
+        @include _320 {
+            width: 7.3rem;
+            height: 3.5rem;
+        }
+
+        .cart-icon__wrapper {
+            padding-right: 1.3rem;
+            position: relative;
+
+            &:after { 
+                content: "";
+                height: 100%;
+                border: 1px solid $light-black;
+                opacity: .4;
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            .cart__icon {
+                width: 2.8rem;
+                height: 2.8rem;
+
+                @include _600 {
+                    width: 1.9rem;
+                    height: 1.9rem;
+                }
+
+                @include _320 {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+            }
+        }
+
+        .cart-content__wrapper {
+            padding-left: .7rem;
+
+            .cart__text {
+                font-size: 1.8rem;
+                font-weight: 700;
+
+                @include _600 {
+                    font-size: 1.2em;
+                }
+
+                @include _320 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+.cart-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+    background: $white-dark;
+    border: 2px solid $green;
+    box-shadow: 2.4rem;
+    padding: 3rem;
+    outline: none;
+
+    @include _834 {
+        padding: 1.5rem;
+    }
+
+    @include _600 {
+        padding: 1rem;
+    }
+
+    @include _480 {
+        width: 75%;
+    }
+
+    .cart-modat__input {
+        flex: 1 1 0;
+
+        & .MuiInputBase-input {
+            
+            @include _600 {
+                padding: .5rem 1rem;
+            }
+        }
+    }
+
+    // .cart-modat__text {
+    //     font-size: 1.8rem;
+    //     font-weight: 400;
+    // }
+
+    .cart-modal__item {
+        margin-bottom: 2rem;
+
+        .cart-modal__text-wrapper {
+            margin: 0 1.5rem;
+            flex: 1 1 0;
+
+            @include _600 {
+                margin: 0 .5rem;
+            }
+        }
+
+        .cart-modat__text {
+            font-size: 1.8rem;
+
+            @include _834 {
+                font-size: 1.4rem;
+            }
+
+            @include _600 {
+                font-size: 1.2rem;
+            }
+
+            @include _480 {
+                line-height: 1.3;
+                font-size: 1rem;
+            }
+        }
+    
+        .cart-modal__cost-wrapper {
+            margin: 0 1.5rem;
+
+            @include _600 {
+                margin: 0 0.5rem;
+            }
+        }
+
+        .cart-modal__img {
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+
+            @include _834 {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            @include _600 {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            @include _480 {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    
+        .cart-madal__qty {
+    
+            &.MuiTextField-root {
+                max-width: 3rem;
+            }
+
+            & .MuiInputBase-input {
+                text-align: center;
+                padding: .5rem;
+            }
+        }
+    
+        .cart-modal__button {
+    
+            &.MuiIconButton-root:hover {
+                background: none;
+            }
+        }
+    }
+
+    .button__sm {
+
+        @include _480 {
+            width: 6rem;
+            height: 3rem;
+            font-size: 1.2rem;
+        }
+    }
+}

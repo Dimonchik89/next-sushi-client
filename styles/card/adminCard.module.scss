@@ -1,0 +1,12 @@
+@import "../var.scss";
+
+.admin_card__inner {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.admin_card {
+    margin: 0 auto;
+    border: 1px solid $light-black;
+    border-radius: 1rem;
+}

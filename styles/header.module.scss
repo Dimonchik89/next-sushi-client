@@ -1,0 +1,247 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.header_top {
+    padding: .4rem 0 .9rem;
+
+    @include _600 {
+        display: none;
+    }
+
+    .header_top__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        &::after {
+            content: "";
+            height: 1.5rem;
+            border: 1px solid $light-black;
+            opacity: .4;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            @include _600 {
+                display: none;
+            }
+
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+
+        @include _1170{
+            &:nth-child(1) {
+                justify-content: start;
+            }
+            &:nth-child(2) {
+                justify-content: center;
+            }
+            &:nth-child(3) {
+                justify-content: end;
+            }
+        }
+
+        @include _834{
+            &:nth-child(1) {
+                justify-content: center;
+            }
+            &:nth-child(2) {
+                justify-content: center;
+            }
+            &:nth-child(3) {
+                justify-content: center;
+            }
+        }
+
+        
+
+        .header_top__inner {
+            display: flex;
+            align-items: center;
+        }
+
+        @include _1170{
+            & .header_top__inner:nth-child(1) {
+                justify-content: start;
+            }
+            & .header_top__inner:nth-child(2) {
+                justify-content: center;
+            }
+            & .header_top__inner:nth-child(3) {
+                justify-content: end;
+            }
+        }
+
+        .header_top__icon {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            @include _834 {
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+
+        .header_top__text {
+            font-size: 1.4rem;
+            font-weight: 400;
+
+            @include _834 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.header_menu {
+    background-color: $light-gray;
+
+    .header_menu__contact {
+
+        .header_contact__icon {
+            width: 1.7rem;
+            height: 1.7rem;
+
+            @include _834 {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+
+            @include _320 {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        .header_contact__text {
+            font-size: 1.4rem;
+            font-weight: 600;
+
+            @include _600 {
+                font-size: 1.2rem;
+            }
+
+            @include _320 {
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+}
+
+.header_menu__links {
+    padding: 3.3rem 0;
+
+    @include _600 {
+        display: none;
+    }
+
+    .button_header__menu.button__lg {
+        font-size: 1.8rem;
+        font-weight: 700;
+
+        @include _834 {
+            font-size: 1.6rem;
+            font-weight: 700;
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+.header_menu__logo {
+
+    .header__logo {
+        width: 10.4rem;
+        height: 10.1rem;
+
+        @include _834 {
+            width: 8.7rem;
+            height: 8.5rem;
+        }
+
+        @include _600 {
+            width: 7rem;
+            height: 6.9rem;
+        }
+
+        @include _480 {
+            width: 5.5rem;
+            height: 5.2rem;
+        }
+    }
+
+    .header_menu__logo_title {
+        font-size: 2.3rem;
+        font-weight: 800;
+
+        @include _834 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            line-height: 1.8rem;
+        }
+
+        @include _600 {
+            font-size: 1.6rem;
+        }
+
+        @include _480 {
+            font-size: 1.4rem;
+        }
+
+        @include _320 {
+            font-size: 1.2rem;
+        }
+        // &.MuiTypography-root {
+        //     font-size: 2.3rem;
+        //     font-weight: 800;
+
+        //     @include _834 {
+        //         font-size: 2.1rem;
+        //         font-weight: 700;
+        //         line-height: 1.8rem;
+        //     }
+
+        //     @include _600 {
+        //         font-size: 1.6rem;
+        //     }
+
+        //     @include _480 {
+        //         font-size: 1.4rem;
+        //     }
+
+        //     @include _320 {
+        //         font-size: 1.2rem;
+        //     }
+        // }
+    }
+
+    .header_menu__logo_subtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        @include _834 {
+            font-size: 1.3rem;
+            line-height: 1.4rem;
+        }
+        
+        @include _600 {
+            font-size: 1.2rem;
+        }
+
+        @include _480 {
+            font-size: 1rem;
+        }
+
+        @include _320 {
+            font-size: .9rem;
+        }
+    }
+}
