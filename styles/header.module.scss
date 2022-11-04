@@ -121,6 +121,7 @@
         .header_contact__text {
             font-size: 1.4rem;
             font-weight: 600;
+            color: $dark-black;
 
             @include _600 {
                 font-size: 1.2rem;
@@ -137,6 +138,7 @@
 
 .header_menu__links {
     padding: 3.3rem 0;
+    color: $dark-black;
 
     @include _600 {
         display: none;
@@ -182,6 +184,7 @@
     .header_menu__logo_title {
         font-size: 2.3rem;
         font-weight: 800;
+        color: $dark-black;
 
         @include _834 {
             font-size: 2.1rem;
@@ -227,6 +230,7 @@
     .header_menu__logo_subtitle {
         font-size: 1.5rem;
         font-weight: 500;
+        color: $dark-black;
 
         @include _834 {
             font-size: 1.3rem;

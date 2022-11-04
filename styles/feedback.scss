@@ -26,6 +26,7 @@
         &.MuiTypography-root {
             font-size: 1.8rem;
             font-weight: 700;
+            color: $dark-black;
 
             @include _600 {
                 font-size: 1.4rem;

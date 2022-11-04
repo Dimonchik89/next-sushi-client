@@ -75,6 +75,7 @@
             .cart__text {
                 font-size: 1.8rem;
                 font-weight: 700;
+                color: $dark-black;
 
                 @include _600 {
                     font-size: 1.2em;
@@ -143,6 +144,7 @@
 
         .cart-modat__text {
             font-size: 1.8rem;
+            color: $dark-black;
 
             @include _834 {
                 font-size: 1.4rem;
