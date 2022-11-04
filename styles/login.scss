@@ -1,11 +1,15 @@
+@import "./var.scss";
+
 .login {
     height: 100vh;
+    background: $white-dark;
 
     .login__title {
 
         &.MuiTypography-root {
             font-size: 2.5rem;
             font-weight: 700;
+            color: $dark-black;
         }
     }
 
