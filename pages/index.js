@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "../components/header/Header";
 import Preview from "../components/preview/Preview";
 import Special from "../components/special/Special";
@@ -12,9 +13,15 @@ import { Box } from "@mui/material";
 import CartStack from "../components/cart/CartStack";
 import useHandleChangeWindow from "../hook/useHandleChangeWindow"; 
 import axios from "axios";
+import usePush from "../hook/usePush";
 
 export default function Home({special, categories, product, theme}) {
   const { open, handleOpen, handleClose } = useHandleChangeWindow();
+  const { showNotify } = usePush();
+
+  useEffect(() => {
+      showNotify(special)
+    }, [])
 
   return (
     <Box sx={{position: "relative"}}>
@@ -26,7 +33,7 @@ export default function Home({special, categories, product, theme}) {
         <WorkTime/>
         <Review/>
         <Feedback/>
-         <Footer/> 
+        <Footer/> 
         <CartModal handleOpen={handleOpen}/>
         <CartStack open={open} handleClose={handleClose}/>
         <a
