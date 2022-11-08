@@ -21,7 +21,7 @@ export default function Home({special, categories, product, theme}) {
 
   useEffect(() => {
       showNotify(special)
-    }, [])
+    }, [showNotify, special])
 
   return (
     <Box sx={{position: "relative"}}>
