@@ -24,7 +24,7 @@ import "../styles/workTime.scss";
 import "../styles/item.scss";
 
 const publicVapidKey =
-  "BOzgjg1syQaMsQung-aEJrLdOxc-NllTRWuG4DGPz9p7AVEjgvE6faJhoruxnZnuX9laVkZZte667oIxKIvP98k";
+  "BJlPTPnoI4EYanuVyKh6bcWXFOdvLJTbO819-lMsIY-j5m9igc2WxxhNPayvqMZRcPHXAyG8Xt6lotEgaMrO9_U";
 
 async function send() {
   const register = await navigator.serviceWorker.register("/sw.js");
@@ -33,6 +33,7 @@ async function send() {
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(publicVapidKey),
   });
+  console.log("fetch=======", `${process.env.NEXT_PUBLIC_BASE_URL}subscribe`);
   await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}subscribe`, {
     method: "POST",
     body: JSON.stringify(subscription),
@@ -40,6 +41,7 @@ async function send() {
       "content-type": "application/json",
     },
   });
+  console.log("fetched======");
 }
 
 function urlBase64ToUint8Array(base64String) {

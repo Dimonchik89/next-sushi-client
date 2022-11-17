@@ -13,52 +13,9 @@ import { Box } from "@mui/material";
 import CartStack from "../components/cart/CartStack";
 import useHandleChangeWindow from "../hook/useHandleChangeWindow";
 import axios from "axios";
-import usePush from "../hook/usePush";
-
-// async function sendHas() {
-//   const register = await navigator.serviceWorker.register(
-//     `${process.env.PUBLIC_URL}/service-worker.js`
-//   );
-//   console.log("Registering Push1..........");
-//   const subscription = await register.pushManager.subscribe({
-//     userVisibleOnly: true,
-//     applicationServerKey: urlBase64ToUint8Array(publicVapidKey),
-//   });
-//   console.log("Push Registered1..............");
-//   console.log("Sending Push1................");
-//   await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}subscribe`, {
-//     method: "POST",
-//     body: JSON.stringify(subscription),
-//     headers: {
-//       "content-type": "application/json",
-//     },
-//   });
-//   console.log("Push send1...............");
-// }
-
-// function urlBase64ToUint8Array(base64String) {
-//   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
-//   const base64 = (base64String + padding)
-//     .replace(/\-/g, "+")
-//     .replace(/_/g, "/");
-
-//   const rawData = window.atob(base64);
-//   const outputArray = new Uint8Array(rawData.length);
-
-//   for (let i = 0; i < rawData.length; i++) {
-//     outputArray[i] = rawData.charCodeAt(i);
-//   }
-
-//   return outputArray;
-// }
 
 export default function Home({ special, categories, product, theme }) {
   const { open, handleOpen, handleClose } = useHandleChangeWindow();
-  const { showNotify } = usePush();
-
-  useEffect(() => {
-    showNotify(special);
-  }, [showNotify, special]);
 
   return (
     <Box sx={{ position: "relative" }}>
